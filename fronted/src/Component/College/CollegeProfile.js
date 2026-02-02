@@ -33,7 +33,7 @@ const CollegeProfile = () => {
                         <div className='c-basic-details' style={{ display: 'flex' }}>
                             {/* logo */}
                             <div className='college-logo-sec'>
-                                <img src={building} alt="" />
+                                <img src={user?.profile?user?.profile:building} alt="" />
                             </div>
                             <div className='basic-info' style={{ marginLeft: '20px' }}>
                                 <h1>{user?.collegename}</h1>
