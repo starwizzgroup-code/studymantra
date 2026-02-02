@@ -1,0 +1,195 @@
+.admin-dashboard-page {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.child-dashboard {
+    width: 90%;
+    height: 90vh;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #F8F9FA;
+}
+
+.welcome-sec {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.welcome-sec h3 {
+    font-size: 25px;
+    color: orange;
+}
+
+.welcome-sec p {
+    color: black;
+}
+
+.admin-profile-sec {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.admin-profile-sec img {
+    width: 95%;
+    height: 95%;
+    border-radius: 100%;
+}
+
+.adminnav-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.adminnavbar-sec {
+    padding: 20px;
+    width: 80px;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 1px 1px 0px;
+    border-radius: 20px;
+    position: absolute;
+    top: 60px;
+}
+
+.adminnavbar-sec ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.adminnavbar-sec ul li {
+    font-size: 14px;
+    margin: 5px 0px;
+    color: #6c6c6c;
+    cursor: pointer;
+    list-style-type: none;
+}
+#admin-logout{
+    border: none;
+    outline: none;
+    background-color:#2563EB;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 7px 14px;
+    cursor: pointer;
+}
+.summary-sec {
+    padding: 20px;
+    width: calc(100% - 40px);
+    border-radius: 20px;
+    height: calc(100% - 100px);
+    background-color: #e9e9e9;
+}
+
+.warpper-cards-sec {
+    width: calc(100% - 40px);
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cards-sec {
+    width: 48%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#dashoard-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.cards {
+    width: 200px;
+    height: 50px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #F8F9FA;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #B3D7FF;
+}
+
+.card-details {
+    margin-left: 15px;
+}
+
+.card-details p {
+    font-size: 14px;
+    color: #D2D2D2;
+}
+
+.card-details span {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0px;
+}
+
+#view {
+    font-size: 12px;
+    color: #D2D2D2;
+    display: flex;
+    align-items: center;
+}
+
+.big-cards-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    margin-top: 20px;
+    width: 48%;
+}
+
+.big-card {
+    width: calc(100% - 40px);
+}
+
+.admin-applications {
+    width: 100%;
+    margin-top: 10px;
+    height: calc(100% - 260px);
+    background-color: white;
+    border-radius: 20px;
+}
+#link{
+    color: #6c6c6c;
+    text-decoration: none;
+}

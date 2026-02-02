@@ -1,0 +1,325 @@
+.wrapper-college-profile-sec{
+    width:100%;
+    margin-top: 20px;
+}
+.college-logo-sec{
+    width: 250px;
+    height: 250px;
+}
+.college-logo-sec img{
+    width: 100%;
+    height: 100%;
+    border-radius:20px;
+}
+.board-details{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.board-details div{
+    margin-right: 15px;
+    min-width: 100px;
+    width: auto;
+    border-radius: 10px;
+    height: 60px;
+    padding: 0px 10px;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.board-details div span{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+#allboard{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#allboard div p{
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+.basic-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.basic-details p{
+    margin-right: 15px;
+}
+.basic-info p{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #6c757d;
+    font-weight: lighter;
+    margin-bottom: 2px;
+}
+.basic-info button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 4px;
+}
+.college-about{
+    margin-top: 15px;
+}
+.college-about h3{
+    color:black;
+}
+.college-about p{
+    width: 100%;
+    font-size: 17px;
+    color: #6c757d;
+    font-weight: lighter;
+    margin-top: 10px;
+}
+
+
+/* edit profile css */
+.app{
+    width: 100%;
+    margin-top: 20px;
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+}
+.logos{
+    width: 100px;
+    height: 100px;
+    background-color: #eaeaea;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logos img{
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+}
+.title{
+    margin-left: 15px;
+}
+.badge{
+    padding: 5px 10px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: bold;
+    background: #fff3cd;
+    color: #b08500;
+}
+.card{
+    margin-top: 10px;
+}
+.form-grid{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.field{
+    width:32%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+.field label{
+    font-size: 14px;
+    margin-bottom: 3px;
+    color: #6c757d;
+}
+.field input{
+    padding: 0px 10px;
+    height: 45px;
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+    outline: none;
+    width: calc(100% - 20px);
+    background-color: transparent;
+    font-size: 14px;
+    color: black;
+}
+.field .board{
+    display: inline-flex;
+    padding: 5px 7px;
+    background-color: #e9e9e9;
+    font-size: 12px;
+    color: black;
+    border-radius: 4px;
+    align-items: center;
+    margin-bottom: 3px;
+    margin-right: 2px;
+}
+.board-sec{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-x: scroll;
+}
+.board-sec::-webkit-scrollbar{
+    display: none;
+}
+.field .board button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-bottom: -5px;
+    cursor: pointer;
+    color: orange;
+}
+.full-height{
+    height: 85px;
+}
+.field-full{
+    width: 100%;
+    margin-bottom: 5px;
+}
+.field-full label{
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 3px;
+}
+.field-full textarea{
+    resize: none;
+    font-size: 14px;
+    color: black;
+    padding: 10px;
+    width: calc(100% - 20px);
+    border: 1px solid lightgrey;
+    outline: none;
+    border-radius: 15px;
+}
+.actions{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.btn-outline{
+    border: 2px solid #f58a07;
+    outline: none;
+    background: white;
+    color: black;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+.btn-primary{
+    background-color: #f58a07;
+    outline: none;
+    color:white;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    border: 2px solid #f58a07;
+    font-weight: bold;
+}
+
+
+/* user profile css */
+.user-profile-page{
+    width: 700px;
+}
+.userprofile-img-sec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#createdat{
+    font-size: 13px;
+    color: #6c757d;
+}
+.userprofile-img{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background-color: orange;
+}
+.userprofile-img-sec div label{
+    padding: 5px 10px;
+    font-size: 13px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7px;
+    cursor: pointer;
+}
+.userprofile-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%; 
+}
+.field select{
+    width: 100%;
+}
+
+/* responsive user profile */
+@media (min-width: 100px) and (max-width: 500px){
+    .user-profile-page{
+        width: 100%;
+    }
+    .main{
+        width: 100%;
+        justify-content: center;
+    }
+    .headers{
+        width: 100%;
+    }
+    .userprofile-img{
+        width: 100px;
+        height: 100px;
+    }
+    .userprofile-img-sec div label{
+        padding: 3px 6px;
+        font-size: 13px;
+        cursor: pointer;
+    }
+    .title h2{
+        align-items: center;
+        margin-top: 10px;
+        font-size: 15px;
+    }
+    .field{
+        width: 100%;
+    }
+    .actions button{
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 768px){
+    .user-profile-page{
+        width: 100%;
+    }
+    .form-grid{
+        display: flex;
+    }
+    .field{
+        width: 48%;
+    }
+    .actions button{
+        padding: 10px;
+        font-size: 13px;
+    }
+}

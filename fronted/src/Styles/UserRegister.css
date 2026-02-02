@@ -1,0 +1,181 @@
+.user-register-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.u-r-m-p {
+    width: 50%;
+    max-height: 85vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+}
+.u-r-m-p::-webkit-scrollbar{
+    display: none;
+}
+
+.r-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.r-header button {
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.registration-form form {
+    width: 100%;
+}
+
+.d-sec {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.d-sec div {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+.d-sec div select{
+    font-size: 14px;
+    color:black;
+}
+.d-sec div label {
+    color: #6c757d;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.d-sec div input,
+select {
+    width: calc(100% - 20px);
+    padding: 0px 10px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    outline: none;
+    height: 40px;
+    color: black;
+    font-size: 15px;
+}
+
+
+.address {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.address label {
+    color: #6c757d;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+.address input{
+    width: calc(100% - 30px);
+    padding: 0px 15px;
+    border: 1px solid lightgrey;
+    outline: none;
+    border-radius: 10px;
+    height: 40px;
+    font-size: 15px;
+    color: black;
+}
+.address input::placeholder, .d-sec div input::placeholder{
+    color:#6c757d;
+    font-size:15px;
+    font-weight: normal;
+}
+.forget-pass{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 14px;
+    color: #007aff;
+    cursor: pointer;
+}
+.address select, .d-sec div select{
+    width: 100%;
+    color: #6c757d;
+    font-size: 15px;
+}
+.already-acc{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items: center; 
+}
+.already-acc p{
+    color:#6c757d;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.already-acc p strong{
+    color: #2563EB;
+}
+.already-acc button{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: #007aff;
+    font-size: 14px;
+    height: 45px;
+    color: white;
+    margin-top: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.already-acc button span{
+    margin-right: 5px;
+}
+s
+#auth{
+    text-decoration: none;
+    color: #007aff;
+}
+#alert{
+    font-size: 12px;
+    font-weight: lighter;
+    color:rgb(189, 187, 187);
+    margin-top: -10px;
+}
+
+/* responsive design */
+@media (min-width: 100px) and (max-width: 500px){
+    .u-r-m-p{
+        width: 80%;
+    }
+    .r-header h3{
+        font-size: 16px;
+    }
+    .d-sec{
+        display: block;
+    }
+    .d-sec div{
+        width: 100%;
+    }
+}
+@media (min-width: 501px) and (max-width: 769px){
+    .u-r-m-p{
+        width: 90%;
+    }
+    .r-header h3{
+        font-size: 16px;
+    }
+}

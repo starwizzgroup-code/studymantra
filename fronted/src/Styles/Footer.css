@@ -1,0 +1,157 @@
+.top-footer {
+    width: 100%;
+    padding: 40px 0px;
+    background-color: #e9e9e9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tnfooter {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-footer-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.top-footer-links div img {
+    width: 150px;
+}
+
+.top-footer-links div h3 {
+    color: black;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+#footerul {
+    margin-top: 10px;
+}
+
+#footerul li {
+    list-style-type: none;
+    font-size: 16px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    color: grey;
+}
+
+#footerul li:hover {
+    color: #007aff;
+    transition: .8s;
+}
+
+.top-footer-collegecourses {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 40px;
+}
+
+.top-footer-collegecourses div h3 {
+    color: black;
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+.footer-desclaimer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#links-sec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.links {
+    width: auto;
+}
+
+.links h3 {
+    color: #2d2d2d;
+    font-weight: lighter;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#disclaimer p {
+    color: grey;
+    font-size: 13px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.social-links div {
+    margin: 0px 15px;
+    cursor: pointer;
+}
+
+.social-links div img {
+    max-width: 30px;
+    max-height: 30px;
+    width: auto;
+    height: auto;
+}
+
+#rsrvd {
+    color: black;
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* responsive design */
+@media (min-width: 100px) and (max-width: 300px) {
+    .tnfooter {
+        width: 90%;
+    }
+#footer-logo{
+    width: 100%;
+}
+    .top-footer-links div h3 {
+        font-size: 16px;
+    }
+
+    #footerul li {
+        font-size: 14px;
+    }
+
+    .top-footer-collegecourses div h3 {
+        font-size: 16px;
+    }
+
+    #disclaimer p {
+        font-size: 13px;
+    }
+    #links-sec{
+        gap: 15px;
+    }
+    .social-links div img{
+        width: 20px;
+        height: 20px;
+    }
+}

@@ -1,0 +1,72 @@
+appSessionauthTokeninput[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.component{
+    width: 600px;
+    margin-top: 20px;
+    background-color: orange;
+}
+.update-name-page{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.updatenam-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.updatenam-header button{
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    color: grey;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.update-name-page div h3{
+    font-size: 16px;
+}
+.update-name-page div p{
+    font-size: 14px;
+    color: grey;
+    margin-top: 2px;
+}
+.update-sec{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+.otpres{
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    font-weight:bold;
+}
+.update-sec input{
+    border: 1px solid lightgrey;
+    outline: none;
+    border-radius: 10px;
+    padding: 0px 10px;
+    height: 45px;
+    width: calc(100% - 20px);
+    font-size: 14px;
+    font-weight: bold;
+}
+.update-sec button{
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background:#f9f9f9;
+    color: black;
+    height: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* responsive design */

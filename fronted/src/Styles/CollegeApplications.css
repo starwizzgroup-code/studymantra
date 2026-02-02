@@ -1,0 +1,100 @@
+.colleageapplication-top-page {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.college-applicaiotns-sec {
+  width: 100%;
+  margin-bottom: 8px;
+  background: white;
+  border-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pending-approval-btn {
+  display: flex;
+  align-items: center;
+}
+
+.pending-approval-btn button {
+  border: none;
+  outline: none;
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 100px;
+  cursor: pointer;
+  background-color: #fff3cd;
+  color: #b08500;
+  margin-right: 20px;
+}
+
+.main-table-sec {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-x: scroll;
+  padding-bottom: 20px;
+}
+.main-table-sec::-webkit-scrollbar{
+  height: 5px;
+}
+
+.main-table-sec::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.main-table-sec::-webkit-scrollbar-thumb {
+  background:black;
+  border-radius: 10px;
+}
+.main-table-sec table{
+  width: 100%;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.main-table-sec thead tr th{
+    padding: 0px 30px 10px 0px;
+    white-space: nowrap;  
+    font-weight: lighter;
+    font-size: 13px;
+    color: #6c757d;
+    font-weight: bold;
+}
+.main-table-sec table tbody tr td{
+    padding: 5px 30px 5px 0px;
+    white-space: nowrap; 
+    color:black;
+    font-size: 14px;
+}
+.main-table-sec table tbody tr td p{
+    padding: 5px 10px;
+    background-color: #fff3cd;
+    color: #b08500;
+    font-size: 12px;
+    border-radius: 40px;
+}
+.main-table-sec table tbody tr td #status p {
+  background: #fff3cd;
+  color: #b08500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+#action {
+  width: 100px;
+}
+
+.main-table-sec table tbody tr td select{
+  display: inline-flex;
+  width: 100px;
+  height: 25px;
+  font-size: 10px;
+}

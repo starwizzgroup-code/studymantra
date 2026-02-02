@@ -1,0 +1,440 @@
+.college-details-page {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+.collegedetails-child {
+    width: 90%;
+}
+
+.child-sec {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.c-o-log-img {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.c-o-log-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 1px solid lightgrey;
+}
+
+.c-o-d {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.c-o-d h1 {
+    font-size: 40px;
+}
+
+#url {
+    font-size: 15px;
+}
+#url a {
+    text-decoration: none;
+    color: #2563EB;
+}
+
+.ic-t {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ic-t div {
+    width: 150px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.ic-t div span {
+    color: grey;
+}
+
+.ic-t div p {
+    font-weight: bold;
+    margin-top: 4px;
+}
+.approval-board{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.board-name-div{
+    margin-right: 15px;
+}
+.board-name-div p{
+    font-weight: bold;
+    color: black;
+}
+
+#about {
+    font-size: 18px;
+    color: #6c757d;
+    margin-top: 20px;
+}
+
+
+/* available courses.js css */
+.availbale-course-page {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.available-course-sec {
+    margin-top: 15px;
+}
+
+.available-course-sec table th,
+td {
+    text-align: left;
+}
+
+.available-course-sec table {
+    width: 100%;
+    border-collapse: separate;
+    /* IMPORTANT */
+    border-spacing: 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    /* clips inner borders */
+}
+
+.available-course-sec table thead tr th {
+    padding: 10px;
+    border: 1px solid lightgrey;
+    color: #6c757d;
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+.available-course-sec table tbody tr td {
+    padding: 10px;
+    border: 1px solid lightgrey;
+    font-size: 15px;
+}
+
+#apply {
+    background-color: orange;
+    color: white;
+    font-size: 15px;
+    padding: 7px 14px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* college overview gallerycss */
+.collegeoverview-gallery-page {
+    margin-top: 20px;
+}
+
+.child-collegegallery {
+    margin-top: 15px;
+    display: flex;
+    column-count: 4;
+    column-gap: 15px;
+}
+
+.gallery-sec {
+    break-inside: avoid;
+    margin-bottom: 16px;
+}
+
+.gallery-sec img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.gallery-sec p {
+    font-size: 16px;
+    margin-top: 5px;
+    color: #6c757d;
+}
+
+/* leave your review */
+.collegereview-leavereview-page {
+    margin-top: 20px;
+}
+
+.leave-review-child {
+    margin-top: 15px;
+}
+
+.allreview-sec {
+    width: 100%;
+    height: 400px;
+    height: auto;
+    overflow-y: hidden;
+    overflow-y: scroll;
+}
+
+.rev-sec {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.rev-sec img {
+    max-width: 60px;
+    max-height: 60px;
+    border-radius: 100%;
+}
+
+.review-content {
+    margin-left: 15px;
+}
+
+.review-content h2 {
+    font-size: 18px;
+}
+
+.review-content p {
+    font-size: 17px;
+    color: #6c757d;
+}
+
+.allreview-sec::-webkit-scrollbar {
+    display: none;
+}
+
+.leaveyourreview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: flex-end;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.leaveyourreview textarea {
+    width: calc(100% - 60px);
+    max-height: 100px;
+    resize: none;
+    overflow-y: auto;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 15px;
+    outline: none;
+    border: 1px solid lightgrey;
+}
+
+.leaveyourreview textarea::placeholder {
+    color: black;
+    font-size: 15px;
+}
+.leaveyourreview textarea::-webkit-scrollbar{
+    display: none;
+}
+.leaveyourreview button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+}
+
+#talktouniversity {
+    position: fixed;
+    bottom: 60px;
+    right: 65px;
+    padding: 12px 18px;
+    background-color: #2563eb;
+    /* example blue */
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* responsive design */
+@media (min-width: 100px) and (max-width: 500px){
+    .collegedetails-child{
+        width: 95%;
+    }
+    .child-sec{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .c-o-d{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+    .c-o-d h1{
+        text-align: center;
+        font-size: 20px;
+    }
+    .ic-t{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .ic-t div{
+        margin: 0px 0px 10px 0px;
+        height: 30px;
+    }
+    .ic-t div span{
+        font-size: 13px;
+    }
+    .ic-t div p{
+        font-size: 14px;
+    }
+    #about p{
+        text-align: center;
+        font-size: 15px;
+    }
+    .availbale-course-page{
+        width: 100%;
+        overflow-x: hidden;
+        overflow-x: scroll;
+    }
+    .availbale-course-page::-webkit-scrollbar{
+        display: none;
+    }
+    #page-title{
+        font-size: 20px;
+    }
+    .available-course-sec table thead tr th{
+        font-size: 14px;
+        white-space: nowrap;
+        padding: 5px;
+    }
+    .available-course-sec table tbody tr td{
+        font-size: 14px;
+        white-space: nowrap;
+        padding: 5px;
+    }
+    .rev-sec img{
+        width: 30px;
+        height: 30px;
+    }
+    .review-content{
+        margin-left: 10px;
+    }
+    .review-content h2{
+        font-size: 15px;
+    }
+    .review-content p{
+        font-size: 13px;
+    }
+    #talktouniversity{
+        right: 10px;
+        padding: 10px;
+        bottom: 70px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 930px){
+    .collegedetails-child{
+        width: 90%;
+    }
+    .c-o-log-img{
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+    .child-sec{
+        display: flex;
+    }
+    .c-o-d h1{
+        font-size: 20px;
+    }
+    .ic-t{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .ic-t div{
+        margin: 0px 10px 10px 0px;
+        height: 30px;
+    }
+    .ic-t div span{
+        font-size: 13px;
+    }
+    .ic-t div p{
+        font-size: 14px;
+    }
+    #about p{
+        text-align: center;
+        font-size: 16px;
+    }
+    .availbale-course-page{
+        width: 100%;
+        overflow-x: hidden;
+        overflow-x: scroll;
+    }
+    .availbale-course-page::-webkit-scrollbar{
+        display: none;
+    }
+    #page-title{
+        font-size: 20px;
+    }
+    .available-course-sec table thead tr th{
+        font-size: 15px;
+        white-space: nowrap;
+        padding: 7px;
+    }
+    .available-course-sec table tbody tr td{
+        font-size: 15px;
+        white-space: nowrap;
+        padding: 7px;
+    }
+    .rev-sec img{
+        width: 30px;
+        height: 30px;
+    }
+    .review-content{
+        margin-left: 10px;
+    }
+    .review-content h2{
+        font-size: 17px;
+    }
+    .review-content p{
+        font-size: 15px;
+    }
+    #talktouniversity{
+        right: 10px;
+        padding: 12px;
+        bottom: 70px;
+        font-size: 15px;
+    }
+}
