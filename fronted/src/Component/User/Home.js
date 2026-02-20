@@ -5,6 +5,9 @@ import Slider from '../Others/Slider'
 import Explore from '../Others/Explore'
 import FindUsPage from '../Others/FindUsPage'
 import Footer from '../Others/Footer'
+import AllCollegeList from '../Others/AllCollegeList'
+import AllQuestionAnswere from '../Others/AllQuestionAnswere'
+import CounselorList from '../Others/CounselorList'
 
 const Home = () => {
   const [showsearch, setshowsearch] = useState(false)
@@ -30,7 +33,10 @@ const Home = () => {
               <>
                 <Slider />
                 <Explore />
+                <AllCollegeList/>
+                <CounselorList/>
                 <FindUsPage />
+                <AllQuestionAnswere/>
                 <Footer/>
               </>
           }

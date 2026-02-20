@@ -11,7 +11,9 @@ router.post('/getcollegecourse', Middleware, async (req, res) => {
         if (!role || !id) return res.status('Invalid request data')
         if (role !== 'college') return res.status(403).json({ message: 'Access denied' })
         const courses = await Course_Model.find({ collegeid: id })
-        res.status(200).json(courses)
+        res.status(200).json({
+            courses: courses
+        })
 
     } catch (err) {
         res.status(500).json({ message: 'Server error' })

@@ -20,7 +20,7 @@ const AdminSetting = () => {
                     </div>
 
                     {/* component */}
-                    <div className='component'>
+                    <div className='component-sec'>
                         <UpdateName />
                         <UpdatePhone />
                         <UpdateMail />

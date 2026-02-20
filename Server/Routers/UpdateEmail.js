@@ -62,7 +62,6 @@ router.post('/request-email-update', Middleware, async (req, res) => {
         })
 
     } catch (err) {
-        console.log(err)
         res.status(500).json({ message: 'Server error' })
     }
 })
@@ -75,6 +74,9 @@ router.patch('/verify-email-update', Middleware, async (req, res) => {
     try {
 
         if (!id || !role || !newemail || !Otp) return res.status(400).json({ message: 'Missing require data' })
+        const checkforcollege = await User_Model.findOne({ email: newemail })
+        const checkforuser = await College_Model.findOne({ email: newemail })
+        if (checkforcollege || checkforuser) return res.status(409).json({ message: 'Enter email is already exist use different' })
         const dbOtp = await Otp_Model.findOne({
             Role: role,
             userid: id,
@@ -82,23 +84,20 @@ router.patch('/verify-email-update', Middleware, async (req, res) => {
             isAvailable: true
         })
         if (!dbOtp) return res.status(404).json({ message: 'Enter otp is expire or invalid' })
-        const checkforcollege = await User_Model.findOne({ email: newemail })
-        const checkforuser = await College_Model.findOne({ email: newemail })
-        if (checkforcollege || checkforuser) return res.status(409).json({ message: 'Enter email is already exist use different' })
+        let update;
         if (role === 'college') {
-            const update = await College_Model.findByIdAndUpdate(
+            update = await College_Model.findByIdAndUpdate(
                 { _id: id },
                 { $set: { email: newemail } }
             )
-            if (!update) return res.status(400).json({ message: 'Email update failed' })
         }
         if (role === 'user') {
-            const update = await User_Model.findByIdAndUpdate(
+            update = await User_Model.findByIdAndUpdate(
                 { _id: id },
                 { $set: { email: newemail } }
             )
-            if (!update) return res.status(400).json({ message: 'Email update failed' })
         }
+        if (!update) return res.status(400).json({ message: 'Email update failed' })
         const deleteotp = await Otp_Model.deleteOne({
             Role: role,
             userid: id,
@@ -108,8 +107,7 @@ router.patch('/verify-email-update', Middleware, async (req, res) => {
         return res.status(200).json({ message: 'Email updated successfully' })
 
     } catch (err) {
-        console.log(err)
-        res.status(500).json({ message: 'Server error' })
+        return res.status(500).json({ message: 'Server error' })
     }
 })
 

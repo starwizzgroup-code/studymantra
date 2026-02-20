@@ -47,6 +47,7 @@ const AddGalleryPhoto = () => {
                 window.location.reload()
             }, 2000);
         } catch (err) {
+            setstatus(true)
             if(err.response.status === 400 || err.response.status === 404 || err.response.status === 500){
                 alert(err.response.data.message)
             }

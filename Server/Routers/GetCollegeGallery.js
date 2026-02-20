@@ -11,8 +11,10 @@ router.post('/getcollegegallery', Middleware, async (req, res) => {
 
         if (!role || !id) return res.status(404).json({ message: 'Missing require data' })
         if (role !== 'college') return res.status(403).json({ message: 'Access denied' })
-        const getgallery = await Gallery_Model.find({ collegeid: id })
-        res.status(200).json(getgallery)
+        const gallery = await Gallery_Model.find({ collegeid: id })
+        res.status(200).json({
+            galleries: gallery
+        })
 
     } catch (err) {
         res.status(500).json({ message: 'Server error' })

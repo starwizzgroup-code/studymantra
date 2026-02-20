@@ -14,6 +14,9 @@ const Schema = new mongoose.Schema({
     profile: {
         type: String,
     },
+    publicId: {
+        type: String
+    },
     email: {
         type: String,
         required: true,

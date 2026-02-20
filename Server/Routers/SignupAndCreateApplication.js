@@ -17,7 +17,7 @@ router.post('/singupandcreateapplication', async (req, res) => {
         if (!application || !applicationId) return res.status(400).json({ message: 'Missing require data' })
         const college = await College_Model.findById({ _id: application?.collegeid }).select('-password')
         if (!college) return res.status(404).json({ message: 'College Not Available Yet' })
-        if (!user && !user?._id) {
+        if (!user || !user?._id) {
             // singup user and create application 
             const user = await User_Register_Model.findOne({
                 $or: [
@@ -71,24 +71,25 @@ router.post('/singupandcreateapplication', async (req, res) => {
             await newapplication.save()
             const token = JWT.sign({ id: newuser?._id, role: newuser?.Role }, process.env.JWT_SECRET_KEY)
             if (!token) return res.status(400).json({ message: 'Something went wrong' })
-            res.status(200).json({
+            return res.status(200).json({
                 token: token,
                 message: 'Successfully'
             })
-
         }
 
+        const findUser = await User_Register_Model.findById({ _id: user?.id })
+        if (!findUser) return res.status(404).json({ message: 'User not found' })
         const findapplication = await Application_Model.findOne({
-            userid: user?._id,
+            userid: findUser?._id,
             collegeid: college?._id,
             course: application?.coursename,
             specialization: application?.specialization,
             modeofcourse: application?.modeofcourse
         })
-        if (findapplication) res.status(409).json({ message: 'You have already applied for this course at the selected college.' })
+        if (findapplication) return res.status(409).json({ message: 'You have already applied for this course at the selected college.' })
         const newapplication = await Application_Model.create({
             applicationId: applicationId,
-            userid: user?._id,
+            userid: findUser?._id,
             collegeid: college?._id,
             collegename: college?.collegename,
             ownername: college?.ownername,
@@ -98,18 +99,18 @@ router.post('/singupandcreateapplication', async (req, res) => {
             modeofcourse: application?.modeofcourse,
             course: application?.coursename.toUpperCase(),
             specialization: application?.specialization,
-            fullname: application?.fullname,
-            email: application?.email,
-            phone: application?.phone,
+            fullname: findUser?.fullname,
+            email: findUser?.email,
+            phone: findUser?.phone,
             city: application?.city,
             state: application?.state,
             createdAt: new Date().toLocaleString()
         })
         await newapplication.save()
-        res.status(200).json({ message: 'Successfully' })
+        return res.status(200).json({ message: 'Successfully' })
 
     } catch (err) {
-        res.status(500).json({ message: 'Server error' })
+        return res.status(500).json({ message: 'Server error' })
     }
 
 })

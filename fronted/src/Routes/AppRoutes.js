@@ -7,6 +7,8 @@ import AdminUserApplications from '../Component/Admin/AdminUserApplications';
 import AdminSetting from '../Component/Admin/AdminSetting';
 import AdminEnquiry from '../Component/Admin/AdminUserEnquiry';
 import CounselorUpdateProfile from '../Component/Admin/CounselorView_UpdateProfile.js';
+import Questions_Answere from '../Component/Admin/Questions_Answere.js';
+import AdminCallRequest from '../Component/Admin/AdminCallRequest.js';
 
 import CollegeProfile from '../Component/College/CollegeProfile';
 import CollegeGallery from '../Component/College/CollegeGallry';
@@ -15,12 +17,17 @@ import Setting from '../Component/College/Setting';
 import EditCourse from '../Component/College/EditCourse'
 
 import UserProfile from '../Component/User/UserProfile';
-import Explore from '../Component/Others/Explore';
 import UserOwnApplicatins from '../Component/User/Application';
 import Home from '../Component/User/Home'
 import UserSettings from '../Component/User/UserSettings';
-import CollegeOverviewPage from '../Component/Others/CollegeOverviewPage';
+
+import AllCollegeList from '../Component/Others/AllCollegeList.js';
 import CreateApplication from '../Component/Auth/CreateApplication';
+import Explore from '../Component/Others/Explore';
+import CollegeOverviewPage from '../Component/Others/CollegeOverviewPage'
+import ForgetPassword from '../Component/Others/ForgetPassword.js';
+import TopUniversity from '../Component/Others/TopUniversity.js';
+import CounselorOverview from '../Component/Others/CounselorOverview.js';
 
 import CollegeSignup from '../Component/Auth/CollegeSignIn';
 import CollegeRegister from '../Component/Auth/CollegeRegister';
@@ -37,10 +44,12 @@ const AppRoutes = () => {
     return (
         <Routes>
             <>
+                <Route path="/home/collegeList" element={<AllCollegeList />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/home/explore" element={<Explore />} />
                 <Route path="/home/collegedetail/:collegeId" element={<CollegeOverviewPage />} />
                 <Route path="/home/collegeoverview/application" element={<CreateApplication />} />
+                <Route path="/home/topUniversity" element={<TopUniversity />} />
             </>
 
             {/* AUTH ROUTES IF NOT LOGGED IN */}
@@ -52,6 +61,7 @@ const AppRoutes = () => {
                     <Route path="/college-signup" element={<CollegeSignup />} />
                     <Route path="/admin-signin" element={<AdminLogin />} />
                     <Route path='/counselor-Singin/9f3c2a7e6b1d4f0a8c5e7d9b2a1c4e6f8d0b3a5c7e9f1a2b4d6' element={<CounselorSignIn />} />
+                    <Route path="/forget-password" element={<ForgetPassword />} />
                     <Route path="*" element={<Navigate to="/home" />} />
                 </>
             )}
@@ -59,6 +69,7 @@ const AppRoutes = () => {
             {role && (user?.Role === 'admin' || user?.Role === 'counselor') && (
                 <>
                     <Route path="/admin/dashboard" element={<AdminProfile />} />
+                    <Route path="/admin/manageQuetions" element={<Questions_Answere />} />
                     <Route path="/admin/counsellors" element={<AdminMainCounsellor />} />
                     <Route path="/admin/Counselor/:fullname/:_id" element={<CounselorUpdateProfile />} />
                     <Route path="/admin/college-applications" element={<AdminCollegeApplication />} />
@@ -66,6 +77,7 @@ const AppRoutes = () => {
                     <Route path="/admin/settings" element={<AdminSetting />} />
                     <Route path="/admin/enquiry" element={<AdminEnquiry />} />
                     <Route path="*" element={<Navigate to="/admin/dashboard" />} />
+                    <Route path="/admin/call-requests" element={<AdminCallRequest />} />
                 </>
             )}
 
@@ -105,6 +117,7 @@ const AppRoutes = () => {
                     <Route path="/user/applications" element={<UserOwnApplicatins />} />
                     <Route path="/user/setting" element={<UserSettings />} />
                     <Route path="*" element={<Navigate to="/home" />} />
+                    <Route path="/home/counselor/counselorOverview/:counselorId" element={<CounselorOverview />} />
                 </>
             )}
         </Routes>

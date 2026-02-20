@@ -1,22 +1,32 @@
-.wrapper-college-profile-sec{
-    width:100%;
+.wrapper-college-profile-sec {
+    width: 100%;
     margin-top: 20px;
 }
-.college-logo-sec{
-    width: 250px;
-    height: 250px;
+
+.c-basic-details {
+    display: flex;
+    flex-wrap: wrap;
 }
-.college-logo-sec img{
+
+.college-logo-sec {
+    width: 200px;
+    height: 200px;
+}
+
+.college-logo-sec img {
     width: 100%;
     height: 100%;
-    border-radius:20px;
+    border-radius: 100%;
 }
-.board-details{
+
+.board-details {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    flex-wrap: wrap;
+    margin-bottom:10px;
 }
-.board-details div{
+
+.board-details div {
     margin-right: 15px;
     min-width: 100px;
     width: auto;
@@ -28,32 +38,47 @@
     flex-direction: column;
     justify-content: center;
 }
-.board-details div span{
-    font-weight: bold;
+.board-details div p{
+    font-size: 14px;
+}
+.board-details div span {
+    font-weight: lighter;
     display: flex;
     align-items: center;
 }
-#allboard{
+
+#allboard {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
-#allboard div p{
+
+#allboard div p {
     margin-right: 10px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     color: black;
 }
-.basic-details{
+
+.basic-details {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.basic-details p{
+
+.basic-info {
+    margin-left: 20px;
+}
+.basic-info h1{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.basic-details p {
     margin-right: 15px;
 }
-.basic-info p{
+
+.basic-info p {
     display: flex;
     align-items: center;
     font-size: 16px;
@@ -61,7 +86,8 @@
     font-weight: lighter;
     margin-bottom: 2px;
 }
-.basic-info button{
+
+.basic-info button {
     border: none;
     outline: none;
     cursor: pointer;
@@ -70,14 +96,19 @@
     font-size: 14px;
     font-weight: bold;
     margin-top: 4px;
+    background-color: orange;
+    color: white;
 }
-.college-about{
+
+.college-about {
     margin-top: 15px;
 }
-.college-about h3{
-    color:black;
+
+.college-about h3 {
+    color: black;
 }
-.college-about p{
+
+.college-about p {
     width: 100%;
     font-size: 17px;
     color: #6c757d;
@@ -87,34 +118,56 @@
 
 
 /* edit profile css */
-.app{
+.app {
     width: 100%;
     margin-top: 20px;
 }
-.main{
+
+.main {
     display: flex;
     flex-wrap: wrap;
 }
-.logos{
+
+.logos {
     width: 100px;
-    height: 100px;
-    background-color: #eaeaea;
+    height: 130px;
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    position: relative;
+    justify-content: space-between;
 }
-.logos img{
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
-    width: auto;
+
+.logos div {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+}
+
+.logos img {
+    width: 100px;
+    max-height: 100px;
     border-radius: 10px;
 }
-.title{
+
+.logos button {
+    border: 1px solid lightgrey;
+    outline: none;
+    background: transparent;
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 7px 14px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.title {
     margin-left: 15px;
 }
-.badge{
+
+.badge {
     padding: 5px 10px;
     border-radius: 100px;
     font-size: 12px;
@@ -122,27 +175,32 @@
     background: #fff3cd;
     color: #b08500;
 }
-.card{
-    margin-top: 10px;
+
+.card {
+    margin-top: 20px;
 }
-.form-grid{
+
+.form-grid {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.field{
-    width:32%;
+
+.field {
+    width: 32%;
     display: flex;
     flex-direction: column;
     margin-bottom: 5px;
 }
-.field label{
+
+.field label {
     font-size: 14px;
     margin-bottom: 3px;
     color: #6c757d;
 }
-.field input{
+
+.field input {
     padding: 0px 10px;
     height: 45px;
     border: 1px solid lightgrey;
@@ -153,7 +211,8 @@
     font-size: 14px;
     color: black;
 }
-.field .board{
+
+.field .board {
     display: inline-flex;
     padding: 5px 7px;
     background-color: #e9e9e9;
@@ -164,17 +223,20 @@
     margin-bottom: 3px;
     margin-right: 2px;
 }
-.board-sec{
+
+.board-sec {
     display: flex;
     align-items: center;
     width: 100%;
     overflow-x: hidden;
     overflow-x: scroll;
 }
-.board-sec::-webkit-scrollbar{
+
+.board-sec::-webkit-scrollbar {
     display: none;
 }
-.field .board button{
+
+.field .board button {
     border: none;
     outline: none;
     background-color: transparent;
@@ -182,19 +244,23 @@
     cursor: pointer;
     color: orange;
 }
-.full-height{
+
+.full-height {
     height: 85px;
 }
-.field-full{
+
+.field-full {
     width: 100%;
     margin-bottom: 5px;
 }
-.field-full label{
+
+.field-full label {
     font-size: 14px;
     color: #6c757d;
     margin-bottom: 3px;
 }
-.field-full textarea{
+
+.field-full textarea {
     resize: none;
     font-size: 14px;
     color: black;
@@ -204,13 +270,15 @@
     outline: none;
     border-radius: 15px;
 }
-.actions{
+
+.actions {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     margin-top: 10px;
 }
-.btn-outline{
+
+.btn-outline {
     border: 2px solid #f58a07;
     outline: none;
     background: white;
@@ -221,10 +289,11 @@
     cursor: pointer;
     margin-right: 15px;
 }
-.btn-primary{
+
+.btn-primary {
     background-color: #f58a07;
     outline: none;
-    color:white;
+    color: white;
     font-size: 14px;
     padding: 10px 20px;
     border-radius: 100px;
@@ -235,91 +304,190 @@
 
 
 /* user profile css */
-.user-profile-page{
+.user-profile-page {
     width: 700px;
 }
-.userprofile-img-sec{
+
+.userprofile-img-sec {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#createdat{
+
+#createdat {
     font-size: 13px;
     color: #6c757d;
 }
-.userprofile-img{
+
+.userprofile-img {
     width: 120px;
     height: 120px;
     border-radius: 100%;
     background-color: orange;
+    position: relative;
 }
-.userprofile-img-sec div label{
-    padding: 5px 10px;
+
+.userprofile-img-sec div label {
     font-size: 13px;
-    border: 1px solid lightgrey;
-    border-radius: 10px;
+    background-color: orange;
+    color: white;
+    border-radius: 100%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-top: 7px;
     cursor: pointer;
+    position: absolute;
+    top: 7px;
+    right: 10px;
 }
-.userprofile-img img{
+
+.userprofile-img img {
     width: 100%;
     height: 100%;
-    border-radius: 100%; 
+    border-radius: 100%;
 }
-.field select{
+
+.field select {
     width: 100%;
 }
 
+.userprofile-img-sec div button {
+    font: 13px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid lightgrey;
+    background: transparent;
+    margin-top: 10px;
+}
+
 /* responsive user profile */
-@media (min-width: 100px) and (max-width: 500px){
-    .user-profile-page{
+@media (min-width: 100px) and (max-width: 500px) {
+    .user-profile-page {
         width: 100%;
     }
-    .main{
+
+    .main {
         width: 100%;
         justify-content: center;
     }
-    .headers{
+
+    .headers {
         width: 100%;
     }
-    .userprofile-img{
+
+    .userprofile-img {
         width: 100px;
         height: 100px;
     }
-    .userprofile-img-sec div label{
+
+    .userprofile-img-sec div label {
         padding: 3px 6px;
         font-size: 13px;
         cursor: pointer;
     }
-    .title h2{
+
+    .title h2 {
         align-items: center;
         margin-top: 10px;
         font-size: 15px;
     }
-    .field{
+
+    .field {
         width: 100%;
     }
-    .actions button{
+
+    .actions button {
         padding: 10px;
         font-size: 13px;
     }
 }
 
-@media (min-width: 501px) and (max-width: 768px){
-    .user-profile-page{
+@media (min-width: 501px) and (max-width: 768px) {
+    .user-profile-page {
         width: 100%;
     }
-    .form-grid{
+
+    .form-grid {
         display: flex;
     }
-    .field{
+
+    .field {
         width: 48%;
     }
-    .actions button{
+
+    .actions button {
         padding: 10px;
         font-size: 13px;
     }
+}
+
+
+/* responsive college profile */
+@media (min-width: 100px) and (max-width: 500px) {
+    .college-logo-sec {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .college-logo-sec img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .basic-info {
+        margin-left: 0px;
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .basic-info h1 {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .board-details {
+        margin-top: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .board-details div {
+        margin-bottom: 10px;
+    }
+
+    #allboard {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .c-basic-details button {
+        font-size: 13px;
+        font-weight: lighter;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+    .basic-info {
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+
+    .basic-info h1 {
+        font-size: 20px;
+    }
+
+    .board-details {
+        margin-top: 10px;
+    }
+    .board-details div {
+    margin-bottom: 10px;
+}
 }

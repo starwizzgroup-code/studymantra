@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react'
 import '../../Styles/AllLeftPanel.css'
 import { Link, useNavigate } from 'react-router-dom'
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
-import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 import { AuthContext } from '../../App'
 import logo from '../../Image/studymantra.svg'
 import DensityMediumRoundedIcon from '@mui/icons-material/DensityMediumRounded';
@@ -62,8 +61,8 @@ const UserHeader = ({ searchpopup, explorepopup }) => {
                             )}
                             <div className='header-btns'>
                                 <button className='btn' onClick={showexplore}>Explore Program</button>
-                                <button className='btn'>Top University</button>
-                                <button className='btn'>More</button>
+                                <button className='btn' onClick={()=>Navigate('/home/topUniversity')}>Top University</button>
+                                {/* <button className='btn'>More</button> */}
                                 <button className='search-btn' onClick={showsearch}><SearchRoundedIcon fontSize='small' /> Search</button>
                                 {!token ? <button className='btn' onClick={() => Navigate('/user-signup')}>SignIn</button> : <button onClick={sign_out}>SignOut</button>}
                             </div>

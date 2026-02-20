@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import CollegeHeader from './CollegeHeader'
 import '../../Styles/CollegeProfile.css'
 import building from '../../Image/building.jpg'
 import { AuthContext } from '../../App'
@@ -8,6 +7,7 @@ import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
 import LocationOnRoundedIcon from '@mui/icons-material/LocationOnRounded';
 import InsertLinkRoundedIcon from '@mui/icons-material/InsertLinkRounded';
 import { useNavigate } from 'react-router-dom'
+import CollegeHeader from './CollegeHeader';
 
 const CollegeProfile = () => {
     const { user, role, token } = useContext(AuthContext)
@@ -21,21 +21,18 @@ const CollegeProfile = () => {
 
     return (
         <div className='top-page'>
-
             <CollegeHeader />
             <div className='admin-profile'>
                 <div className='child-profile'>
-                    {/* page title */}
-                    <h1 id='page-title'>Profile</h1>
 
                     <div className='wrapper-college-profile-sec'>
 
                         <div className='c-basic-details' style={{ display: 'flex' }}>
                             {/* logo */}
                             <div className='college-logo-sec'>
-                                <img src={user?.profile?user?.profile:building} alt="" />
+                                <img src={user?.profile ? user?.profile : building} alt="" />
                             </div>
-                            <div className='basic-info' style={{ marginLeft: '20px' }}>
+                            <div className='basic-info'>
                                 <h1>{user?.collegename}</h1>
                                 <div className='board-details'>
                                     <div>
@@ -79,20 +76,16 @@ const CollegeProfile = () => {
                                         <p>Site Url</p>
                                         <span><InsertLinkRoundedIcon fontSize='extrasmall' />{user?.siteurl ? user?.siteurl : 'Not provided'}</span>
                                     </div>
-                                    <div>
-                                        <p>Review</p>
-                                        <span>100</span>
-                                    </div>
                                 </div>
                                 <button onClick={editprofile}>Edit Profile</button>
                             </div>
                         </div>
+
                         {/* about */}
                         <div className='college-about'>
                             <h3>About College</h3>
                             <p>{user?.about}</p>
                         </div>
-
 
                     </div>
 

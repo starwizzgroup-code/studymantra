@@ -1,0 +1,74 @@
+.createquestions-page{
+    margin: 30px 0px;
+}
+.createquestions-childpage{
+    width: 100%;
+}
+.createquestions-childpage input{
+    padding: 0px 15px;
+    height: 45px;
+    border: 1px solid lightgrey;
+    outline: none;
+    border-radius: 15px;
+    color: black;
+    font-size: 14px;
+    width: calc(100% - 32px);
+}
+.createquestions-childpage input textarea::placeholder{
+    color: lightgrey;
+    font-size: 14px;
+}
+.createquestions-childpage div textarea{
+    padding: 15px;
+    width: calc(100% - 32px);
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+    outline: none;
+    font-size: 14px;
+    color: grey;
+    margin-top: 10px;
+    resize: none;
+}
+.createquestions-childpage div button{
+    padding: 5px 10px;
+    font: 14px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    cursor: pointer;
+}
+
+
+/* all question and answere */
+.showquestionandanswere{
+    padding: 30px 35px;
+    width: calc(100% - 70px);
+    border-radius: 15px;
+}
+.showquestionandanswere div{
+    margin-bottom: 10px;
+}
+details summary{
+    font-size: 16px;
+}
+details p{
+    font-size: 16px;
+    color: lightgrey;
+    margin-top: 5px;
+}
+details button{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: 12px;
+    background-color: #f9f9f9;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.showquestionandanswere div hr{
+    background-color: lightgrey;
+    border: none;
+    height: 1px;
+    margin-top: 15px;
+}

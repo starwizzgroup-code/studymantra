@@ -55,8 +55,8 @@ const UpdatePassword = () => {
 
             <div className='updatenam-header'>
                 <div>
-                    <h3>Passwrod</h3>
-                    <p>Fkade3974y293rcrc</p>
+                    <h3>Password</h3>
+                    {/* <p>Fkade3974y293rcrc</p> */}
                 </div>
                 <button onClick={() => sethide(prev => !prev)}>{ishide ? 'Update' : 'Cancel'}</button>
             </div>

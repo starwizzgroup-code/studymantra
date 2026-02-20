@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import CollegeHeader from './CollegeHeader'
 import AddNewCourse from './AddNewCourse'
 import AddRoundedIcon from '@mui/icons-material/AddRounded';
 import CollegeManageCourse from './CollegeManageCourse';
 import { useNavigate } from 'react-router-dom'
 import '../../Styles/AdminProfile.css'
-import KeyboardDoubleArrowLeftRoundedIcon from '@mui/icons-material/KeyboardDoubleArrowLeftRounded';
+import { FaAngleLeft } from "react-icons/fa6";
 
 const ManageCourse = () => {
   const [show, setshow] = useState(false)
@@ -17,13 +16,13 @@ const ManageCourse = () => {
         <div className='child-profile'>
           {/* page title */}
           <div id='page-title'>
-            <button onClick={() => Navigate(-1)}><KeyboardDoubleArrowLeftRoundedIcon /></button>
-            <h1>Manage Courses</h1>
+            <p onClick={() => Navigate(-1)}>Profile</p>
+            <span><FaAngleLeft fontSize={14} /></span>
+            <h1>Manage Course</h1>
           </div>
-
           {/* course page */}
           <div className='counselor-page'>
-            <h3>Manage Courses</h3>
+            <h1></h1>
             <button onClick={() => setshow(val => !val)}><AddRoundedIcon /> Add New</button>
           </div>
 

@@ -81,6 +81,10 @@
     cursor: pointer;
     list-style-type: none;
 }
+#link:hover{
+    color: black;
+    transition: .8s ease-in-out;
+}
 #admin-logout{
     border: none;
     outline: none;

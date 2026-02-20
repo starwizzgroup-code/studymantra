@@ -3,30 +3,10 @@ import '../../Styles/CollegeApplications.css'
 import axios from 'axios'
 import { AuthContext } from '../../App'
 
-const ChildCollegeApplications = () => {
+const ChildCollegeApplications = ({ college_applications }) => {
     const URL = process.env.REACT_APP_SERVER_URL
     const { user, role, token } = useContext(AuthContext)
-    const [college_applications, setcollege_applications] = useState([])
     const status = ['Pending', 'Approval', 'Reject', 'UnderReview']
-
-    // fetch all college application
-    useEffect(() => {
-        const fetch_college_application = async () => {
-            try {
-                const res = await axios.post(`${URL}/collegeapplications`, {}, {
-                    headers: { Authorization: `Bearer ${token}` }
-                })
-                setcollege_applications(res?.data)
-            } catch (err) {
-                if (err.response.status === 403 || err.response.status === 500 ) {
-                    alert(err.response.data.message)
-                }
-            }
-        }
-        if (token) {
-            fetch_college_application()
-        }
-    }, [URL, token])
 
     // take action approval, underreview, reject
     const takeaction = async (e, college) => {
@@ -41,9 +21,27 @@ const ChildCollegeApplications = () => {
                     window.location.reload()
                 } catch (err) {
                     if (err.response.status === 403 || err.response.status || 400 || err.response.status || 500) {
-                        alert(err.response.data.message)
+                        alert(err.response.data.message || 'Something went wrong')
                     }
                 }
+            }
+        }
+    }
+
+    // tier action
+    const tierAction = async (college) => {
+        const collegeId = college?._id
+        if (!collegeId) return;
+        const isConfirm = window.confirm('Enable Tier Help for top university listing')
+        if (!isConfirm) return;
+        try {
+            const res = await axios.patch(`${URL}/tierAction/${collegeId}`, {}, {
+                headers: {Authorization: `Bearer ${token}`}
+            })
+            window.location.reload() 
+        } catch (err) {
+            if(err?.response?.status === 400 || err?.response?.status === 403 || err?.response?.status === 404 || err?.response?.status === 500){
+                alert(err?.response?.data?.message || 'Something went wrong')
             }
         }
     }
@@ -83,6 +81,7 @@ const ChildCollegeApplications = () => {
                                 <th>Date</th>
                                 <th>Status</th>
                                 <th>Action</th>
+                                <th>Tier Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -101,7 +100,7 @@ const ChildCollegeApplications = () => {
                                                 <td>{college?.address}</td>
                                                 <td>{college?.ownername}</td>
                                                 <td>{college?.collegephone}</td>
-                                                <td>{college?.createdAt.split(',')[0]}</td>
+                                                <td>{college?.createdAt.split('T')[0]}</td>
                                                 <td id='status'><p>{college?.Status}</p></td>
                                                 <td id='action'>
                                                     <select onChange={(e) => takeaction(e, college)}>
@@ -112,6 +111,7 @@ const ChildCollegeApplications = () => {
                                                         <option value="Reject">Reject</option>
                                                     </select>
                                                 </td>
+                                                <td><button onClick={() => { tierAction(college) }}>{!college?.isTier?'Enable':'Disable'}</button></td>
                                             </tr>
                                         )
                                     })

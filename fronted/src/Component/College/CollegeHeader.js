@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { AuthContext } from '../../App'
 import DensityMediumRoundedIcon from '@mui/icons-material/DensityMediumRounded';
 import ClearRoundedIcon from '@mui/icons-material/ClearRounded';
+import logo from '../../Image/studymantra.svg'
 
 const CollegeHeader = () => {
     const { user, role, token } = useContext(AuthContext)
@@ -29,7 +30,7 @@ const CollegeHeader = () => {
 
                     {/* logo */}
                     <div className='logo-sec'>
-                        <h1 style={{ color: 'orange', fontWeight: 'bold' }}>Logo</h1>
+                        <img src={logo} alt="" id='logo'/>
                     </div>
                 </div>
 

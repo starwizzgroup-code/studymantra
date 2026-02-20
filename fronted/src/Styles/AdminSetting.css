@@ -1,13 +1,13 @@
-appSessionauthTokeninput[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-.component{
-    width: 600px;
+.component-sec{
+    max-width: 600px;
+    width: auto;
     margin-top: 20px;
-    background-color: orange;
 }
 .update-name-page{
     width: 100%;
@@ -70,3 +70,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* responsive design */
+@media (min-width: 100px) and (max-width: 400px){
+    .update-name-page div h3{
+        font-size: 14px;
+    }
+}

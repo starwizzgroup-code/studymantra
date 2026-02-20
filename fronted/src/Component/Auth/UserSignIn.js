@@ -3,8 +3,6 @@ import '../../Styles/UserRegister.css'
 import ClearRoundedIcon from '@mui/icons-material/ClearRounded';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios'
-import { Spin } from 'antd';
-import { LoadingOutlined } from "@ant-design/icons"
 
 const UserSignIn = () => {
     const Navigate = useNavigate()
@@ -62,10 +60,10 @@ const UserSignIn = () => {
                         </div>
                         <div className='address'>
                             <label>Password</label>
-                            <input type="text" name="password" id="" onChange={handlechanges} placeholder='Password' required />
+                            <input type="password" name="password" id="" onChange={handlechanges} placeholder='Password' required />
                         </div>
                         <div className='forget-pass'>
-                            <p>Forget password</p>
+                            <Link to={'/forget-password'}><p>Forget password</p></Link>
                         </div>
 
                         <div className='already-acc'>

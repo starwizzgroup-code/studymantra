@@ -8,7 +8,7 @@ const CollegeOverviewBasicDetails = ({ collegeId, collegebasic }) => {
         <div className='college-basic-details' style={{ marginTop: '30px' }}>
             <div className='child-sec'>
                 <div className='c-o-log-img'>
-                    <img src={collegebasic?.logo ? collegebasic?.logo : building} alt="" />
+                    <img src={collegebasic?.profile ? collegebasic?.profile : building} alt="" />
                 </div>
                 <div className='c-o-d'>
                     <h1>{collegebasic?.collegename}</h1>

@@ -17,7 +17,7 @@ router.post('/getcollegBycourse', async (req, res) => {
         const colleges = await College_Model.find({
             _id: { $in: collegeIds },
             Status: "Approval"
-        }).select('collegename institutecategory type mode logo')
+        }).select('collegename institutecategory type mode profile')
         res.status(200).json(colleges)
 
     } catch (err) {

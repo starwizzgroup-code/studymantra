@@ -6,7 +6,7 @@
 }
 
 .addnewcourse-page .course-form {
-    width: 550px;
+    width: 500px;
     border-radius: 20px;
     padding: 15px 10px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -16,46 +16,53 @@
 .course-form form {
     width: 100%;
 }
-.m-c-sec{
+
+.m-c-sec {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 10px;
 }
-.c-sec{
+
+.c-sec {
     width: 49%;
     display: flex;
     flex-direction: column;
 }
-.c-sec label{
+
+.c-sec label {
     font-size: 14px;
     color: #6c757d;
     margin-bottom: 3px;
 }
-.c-sec select{
-    padding:0px 10px; /* space for arrow */
+
+.c-sec select {
+    padding: 0px 10px;
+    /* space for arrow */
     width: calc(100% - 20px);
     height: 40px;
     font-size: 15px;
     font-weight: normal;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 40px;
 }
-select {
-  width: 100%;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  padding-right: 40px;
-}
+
+
 .select-wrapper::after {
-  content: "▼";
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
+    content: "▼";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
 }
-.c-sec input{
+
+.c-sec input {
     padding: 0px 10px;
     width: calc(100% - 20px);
     border-radius: 10px;
@@ -66,11 +73,13 @@ select {
     height: 40px;
     color: black;
 }
-.c-sec input::placeholder{
+
+.c-sec input::placeholder {
     color: black;
     font-size: 15px;
 }
-.course-form form button{
+
+.course-form form button {
     width: 100%;
     height: 45px;
     font-size: 15px;
@@ -82,37 +91,41 @@ select {
 }
 
 /* edit course css */
-.edit-course-page{
-    width: 700px;
+.edit-course-page {
+    max-width: 700px;
+    width: auto;
     margin-top: 30px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 20px;
     padding: 20px;
 }
-.edit-course-page form{
+
+.edit-course-page form {
     width: 100%;
     margin-top: 15px;
 }
-.edit-course{
-    width: 100%;
+
+.edit-course-page form .grid-layout {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    column-count: 3;
-    column-gap: 10px;
-    margin-bottom: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
-.e-course-sec{
-    width:100%;
+
+.e-course-sec {
+    width: 32%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 }
-.e-course-sec label{
+
+.e-course-sec label {
     font-size: 14px;
     color: #6c757d;
     margin-bottom: 3px;
 }
-.e-course-sec input{
+
+.e-course-sec input {
     padding: 0px 10px;
     width: calc(100% - 20px);
     height: 40px;
@@ -122,16 +135,20 @@ select {
     color: black;
     outline: none;
 }
-.e-course-sec select{
+
+.e-course-sec select {
+    width: 100%;
     font-size: 15px;
     font-weight: normal;
 }
-.edit-course-fee label{
+
+.edit-course-fee label {
     color: #6c757d;
     font-size: 14px;
     margin-bottom: 3px;
 }
-.edit-course-fee input{
+
+.edit-course-fee input {
     padding: 0px 10px;
     width: calc(100% - 20px);
     height: 40px;
@@ -141,7 +158,8 @@ select {
     color: black;
     outline: none;
 }
-.edit-course-page form button{
+
+.edit-course-page form button {
     width: 100%;
     height: 45px;
     border: none;
@@ -154,40 +172,46 @@ select {
 
 
 /* college manage course */
-.college-course-page{
+.college-course-page {
     width: 100%;
     overflow-x: hidden;
     overflow-x: scroll;
     padding-bottom: 15px;
 }
-.college-course-page::-webkit-scrollbar{
-  height: 5px;
+
+.college-course-page::-webkit-scrollbar {
+    height: 5px;
 }
 
 .college-course-page::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
+    background: #f1f1f1;
+    border-radius: 10px;
 }
 
 .college-course-page::-webkit-scrollbar-thumb {
-  background:black;
-  border-radius: 10px;
+    background: black;
+    border-radius: 10px;
 }
 
-.college-course-page table{
+.college-course-page table {
     width: 100%;
     text-align: left;
 }
-.college-course-page table thead tr th{
+
+.college-course-page table thead tr th {
     padding: 0px 30px 10px 0px;
-    white-space: nowrap;  
+    white-space: nowrap;
+    font-size: 14px;
 }
-.college-course-page table tbody tr td{
+
+.college-course-page table tbody tr td {
     padding: 5px 30px 5px 0px;
-    white-space: nowrap; 
+    white-space: nowrap;
     color: #6c757d;
+    font-size: 14px;
 }
-#edit-btn{
+
+#edit-btn {
     border: none;
     outline: none;
     background-color: transparent;
@@ -196,33 +220,70 @@ select {
 
 
 /* yourapplication-top-page */
-.yourapplication-top-page{
+.yourapplication-top-page {
     margin-top: 20px;
     overflow-x: hidden;
     overflow-x: scroll;
 }
-.yourapplication-top-page table{
+
+.yourapplication-top-page table {
     width: 100%;
     text-align: left;
 }
 
-.yourapplication-top-page table thead tr th{
+.yourapplication-top-page table thead tr th {
     padding: 0px 30px 10px 0px;
-    white-space: nowrap;  
+    white-space: nowrap;
+    font-size: 14px;
 }
-.yourapplication-top-page table tbody tr td{
+
+.yourapplication-top-page table tbody tr td {
     padding: 5px 30px 5px 0px;
-    white-space: nowrap; 
+    white-space: nowrap;
     color: #6c757d;
+    font-size: 14px;
 }
-.yourapplication-top-page table tbody tr td p{
+
+.yourapplication-top-page table tbody tr td p {
     padding: 5px 10px;
     background-color: #fff3cd;
     color: #b08500;
     font-size: 12px;
     border-radius: 40px;
 }
-.yourapplication-top-page h3{
-    color: #6c757d;
-    margin-bottom: 15px;
+
+/* add new course responsive */
+@media (min-width: 100px) and (max-width: 400px) {
+    .course-form {
+        width: 100%;
+    }
+
+    .c-sec {
+        width: 100%;
+    }
 }
+
+@media (min-width: 401px) and (max-width: 600px) {
+    .addnewcourse-page .course-form {
+        width: 300px;
+    }
+}
+
+/* edit course responsive*/
+@media (min-width: 100px) and (max-width: 350px){
+    .edit-course-page p{
+        font-size: 14px;
+    }
+    .e-course-sec{
+        width: 100%;
+    }
+}
+@media (min-width: 351px) and (max-width: 580px){
+    .grid-layout{
+        display: flex;
+    }
+    .e-course-sec{
+        width: 48%;
+    }
+}
+

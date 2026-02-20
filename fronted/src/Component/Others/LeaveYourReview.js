@@ -11,7 +11,6 @@ const LeaveYourReview = ({ collegeId }) => {
     const [status, setstatus] = useState(true)
     const [review, setreview] = useState([])
     const [reviewdata, setreviewdata] = useState({
-        collegeid: collegeId,
         review: ''
     })
 
@@ -33,11 +32,12 @@ const LeaveYourReview = ({ collegeId }) => {
     // add review
     const add_review = async () => {
         if (!status) return;
+        if(!collegeId) return;
         const isempty = Object.values(reviewdata).some(val => val === null || val === undefined || val === '')
         if (isempty) return alert('Fill up all information')
         try {
             setstatus(false)
-            const res = await axios.post(`${URL}/leavereview`, { reviewdata, user }, {
+            const res = await axios.post(`${URL}/leavereview`, {collegeId, reviewdata, user }, {
                 headers: { Authorization: `Bearer ${token}` }
             })
             setTimeout(() => {

@@ -4,6 +4,7 @@ const CollegeModel = require('../Models/College_register')
 const JWT = require('jsonwebtoken')
 const jwt_secret = require('dotenv').config()
 const User_Model = require('../Models/College_register')
+const Counselor_Model = require('../Models/CounselorModel')
 const bcrypt = require('bcrypt')
 
 router.post('/college_register', async (req, res) => {
@@ -13,8 +14,9 @@ router.post('/college_register', async (req, res) => {
     try {
         if (!collegeRegisterData || !hashpassword) return res.status(400).json({ message: 'Missing require data' })
         const college = await CollegeModel.findOne({ $or: [{ email: collegeRegisterData.email }, { phone: collegeRegisterData.phone }] })
-        const user = await User_Model.findOne({$or: [{ email: collegeRegisterData?.email },{ phone: collegeRegisterData?.phone }]})
-        if (college || user) return res.status(401).json({ message: 'Email or Phone number already exists' })
+        const user = await User_Model.findOne({ $or: [{ email: collegeRegisterData?.email }, { phone: collegeRegisterData?.phone }] })
+        const counselor = await Counselor_Model.findOne({ $or: [{ email: collegeRegisterData?.email }, { phone: collegeRegisterData?.phone }] })
+        if (college || user || counselor) return res.status(401).json({ message: 'Email or Phone number already exist' })
 
         // register college
         const register_college = await CollegeModel.create({

@@ -282,6 +282,8 @@ td {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
+
+
 /* responsive design */
 @media (min-width: 100px) and (max-width: 500px){
     .collegedetails-child{

@@ -11,6 +11,10 @@ const Schema = new mongoose.Schema({
         require: true,
         default: 'Pending'
     },
+    isTier: {
+        type: Boolean,
+        default: false
+    },
     institutecategory: {
         type: String,
         require: true
@@ -44,7 +48,10 @@ const Schema = new mongoose.Schema({
         type: String,
         require: true
     },
-    logo: {
+    profile: {
+        type: String
+    },
+    publicId: {
         type: String
     },
     siteurl: {

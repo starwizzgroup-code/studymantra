@@ -7,7 +7,7 @@ const FindUsPage = () => {
     return (
         <div className='findusepage'>
             <div className='child-finduspage'>
-                <h3 style={{ fontSize: '25px' }}>Find Us</h3>
+                <h3 style={{ fontSize: '18px' }}>Find Us</h3>
                 <div className='tnchild-finduppage' style={{ marginTop: '10px' }}>
                     <img src={studymarntralogo} alt="" id='finduslogo' />
                     <div className='findus-content'>

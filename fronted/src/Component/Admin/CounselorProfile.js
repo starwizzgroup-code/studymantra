@@ -5,7 +5,7 @@ import person from '../../Image/person.jpg'
 import { Spin } from 'antd';
 import { LoadingOutlined } from "@ant-design/icons"
 
-const CounselorProfile = ({ profile, setCounselorPayload, updateCounselor_profile, signIn_counselor }) => {
+const CounselorProfile = ({ profile, setCounselorPayload, updateCounselor_profile}) => {
 
   const [status, setstatus] = useState(false)
   const [islinksend, setislinksend] = useState(true) //avoid multiple call for send counselor signin link
@@ -43,14 +43,6 @@ const CounselorProfile = ({ profile, setCounselorPayload, updateCounselor_profil
     if (!status) return;
     updateCounselor_profile()
     setstatus(true)
-  }
-
-
-  // send signin link
-  const send_signInlink = async () => {
-    if (!islinksend) return;
-    setislinksend(false)
-    signIn_counselor()
   }
 
   return (
@@ -198,9 +190,6 @@ const CounselorProfile = ({ profile, setCounselorPayload, updateCounselor_profil
           <div className='update-discard-btn'>
             <button onClick={() => { window.location.reload() }}>Discard</button>
             <button type='submit' style={{ cursor: status ? 'pointer' : 'not-allowed' }}>Update Changes</button>
-            <button onClick={send_signInlink} style={{ cursor: islinksend ? 'pointer' : 'not-allowed' }}>
-              {!islinksend ? <LoadingOutlined style={{ fontSize: 15, color: "black" }} Spin /> : ''} Send SignIn Link
-            </button>
           </div>
 
         </div>

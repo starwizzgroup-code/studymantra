@@ -2,22 +2,12 @@ import React, { useContext, useState } from 'react'
 import person from '../../Image/person.jpg'
 import axios from 'axios';
 import { AuthContext } from '../../App';
+import AddRoundedIcon from '@mui/icons-material/AddRounded'
 
-const Profile = ({ users }) => {
+const Profile = ({ userdata, setuserdata, UpdateProfilePic, update_profile,canupdate, status, handleonchange}) => {
     const URL = process.env.REACT_APP_SERVER_URL
     const { user, role, token } = useContext(AuthContext)
 
-    const [status, setstatus] = useState(true)
-    const [canupdate, setcanupdate] = useState(false)
-    const [userdata, setuserdata] = useState(users)
-
-
-    // handledata
-    const handleonchange = (e) => {
-        const { name, value } = e.target
-        setuserdata(data => ({ ...data, [name]: value }))
-        setcanupdate(true)
-    }
 
     // handle image
     const handleImageChange = (e) => {
@@ -31,24 +21,6 @@ const Profile = ({ users }) => {
         reader.readAsDataURL(file);
     };
 
-    const update_profile = async () => {
-        if (!status) return;
-        try {
-            setstatus(false)
-            const res = await axios.patch(`${URL}/updateuserprofile`, { userdata }, {
-                headers: { Authorization: `Bearer ${token}` }
-            })
-            setTimeout(() => {
-                window.location.reload()
-            }, 2000);
-        } catch (err) {
-            setstatus(true)
-            if (err?.response?.status === 400 || err?.response?.status === 403 || err?.response?.status === 500) {
-                alert(err?.response?.data?.message)
-            }
-        }
-    }
-
     return (
         <div class="app">
 
@@ -58,10 +30,11 @@ const Profile = ({ users }) => {
 
                         <div className='userprofile-img'>
                             <img src={userdata?.profile ? userdata?.profile : person} alt="" />
+                            <label for='file'><AddRoundedIcon/></label>
+                            <input type="file" name="profile" id="file" onChange={handleImageChange} style={{ display: 'none' }} />
                         </div>
                         <div>
-                            <label for='file'>Change</label>
-                            <input type="file" name="profile" id="file" onChange={handleImageChange} style={{ display: 'none' }} />
+                            <button onClick={UpdateProfilePic}>Change</button>
                         </div>
                     </div>
                 </div>
@@ -90,7 +63,7 @@ const Profile = ({ users }) => {
 
                     <div class="field">
                         <label>DOB</label>
-                        <input type='date' name='DOB' id='' value={userdata?.DOB} onChange={handleonchange} placeholder='DOB' />
+                        <input type='date' name='DOB' id='' onChange={handleonchange} placeholder='DOB' />
                     </div>
 
                     <div class="field">
@@ -119,7 +92,7 @@ const Profile = ({ users }) => {
                 {canupdate && (
                     <div class="actions">
                         <button class="btn-outline" onClick={() => window.location.reload()}>Discard Changes</button>
-                        <button class="btn-primary" onClick={update_profile} style={{cursor:status?'pointer':'not-allowed'}}>Save Changes</button>
+                        <button class="btn-primary" onClick={update_profile} style={{ cursor: status ? 'pointer' : 'not-allowed' }}>Save Changes</button>
                     </div>
                 )}
             </div>

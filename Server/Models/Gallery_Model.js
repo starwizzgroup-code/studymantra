@@ -10,7 +10,7 @@ const Schema = new mongoose.Schema({
         type: String,
         required: true
     },
-    file: {
+    fileurl: {
         type: String,
         required: true
     },

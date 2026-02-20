@@ -1,0 +1,214 @@
+.counselorOverview-page {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* counselor overview profile */
+.counseloroverview-profile {
+    width: 400px;
+}
+
+.profile-pic-content {
+    display: flex;
+}
+
+.profile-pic-content img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+
+.profile-content {
+    margin-left: 10px;
+}
+
+.profile-content h3 {
+    font: 15px;
+}
+
+.profile-content div span {
+    color: grey;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+#counselor-about {
+    font: 16px;
+    margin-top: 10px;
+    color: lightgrey;
+}
+
+
+/* call request  */
+.create-call-request {
+    margin-top: 30px;
+}
+
+.call-request-form {
+    margin-top: 15px;
+}
+
+.call-request-form form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.req-inp {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.req-inp label {
+    color: black;
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 5px;
+}
+
+.req-inp input {
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 0px 5px;
+    height: 35px;
+    width: calc(100% - 12px);
+    font-size: 14px;
+    color: black;
+}
+
+.req-inp select {
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 0px 5px;
+    height: 35px;
+    width: 100%;
+    font-size: 14px;
+    color: black;
+}
+
+.call-request-form form button {
+    background-color: orange;
+    color: white;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* counselor overview review*/
+.counseloroverview-review {
+    width: calc(750px - 30px);
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.counselor-review {
+    width: 100%;
+    height: 500px;
+    margin-top: 15px;
+    overflow-y: hidden;
+    overflow-y: scroll;
+}
+
+.counselor-review::-webkit-scrollbar {
+    display: none;
+}
+
+.create-review-page {
+    margin-top: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.create-review-page textarea {
+    padding: 10px;
+    width: calc(100% - 70px);
+    resize: none;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    font-size: 14px;
+    color: black;
+}
+
+.create-call-request textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.create-review-page button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* counselor review */
+.c-review-sec {
+    width: 100%;
+    display: flex;
+}
+
+.c-review-sec img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.c-review-sec div {
+    margin-left: 15px;
+}
+
+.c-review-sec div h3 {
+    font-size: 15px;
+}
+
+.c-review-sec div p {
+    font-size: 14px;
+    color: grey;
+    margin-top: 5px;
+}
+
+
+/* responsive design */
+@media (min-width: 100px) and (max-width: 400px) {
+    .call-request-form form .req-inp {
+        width: 100%;
+    }
+
+    .counseloroverview-review {
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 768px) {
+    .counseloroverview-profile {
+        width: 100%;
+    }
+
+    .counseloroverview-review {
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .counseloroverview-profile {
+        width: 300px;
+    }
+
+    .counseloroverview-review {
+        width: calc(100% - 350px);
+    }
+
+}

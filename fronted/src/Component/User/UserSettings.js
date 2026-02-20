@@ -3,7 +3,7 @@ import UpdatePhone from '../Auth/UpdatePhone'
 import UpdateMail from '../Auth/UpdateMail'
 import UpdatePassword from '../Auth/UpdatePassword'
 import { useNavigate } from 'react-router-dom'
-import KeyboardDoubleArrowLeftRoundedIcon from '@mui/icons-material/KeyboardDoubleArrowLeftRounded';
+import { FaAngleLeft } from "react-icons/fa6";
 
 const UserSettings = () => {
 
@@ -15,10 +15,13 @@ const UserSettings = () => {
             <div className='admin-profile'>
                 <div className='child-profile'>
                     {/* page title */}
-                    <h1 id='page-title'><button onClick={() => Navigate(-1)}><KeyboardDoubleArrowLeftRoundedIcon /></button>Setting</h1>
-
+                    <div id='page-title'>
+                        <p onClick={() => Navigate(-1)}>Home</p>
+                        <span><FaAngleLeft fontSize={14} /></span>
+                        <h1>Settings</h1>
+                    </div>
                     {/* component */}
-                    <div style={{width:'600px',marginTop:'15px'}}>
+                    <div className='component-sec'>
                         <UpdatePhone />
                         <UpdateMail />
                         <UpdatePassword />

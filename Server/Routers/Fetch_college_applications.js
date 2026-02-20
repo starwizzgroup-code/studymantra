@@ -8,7 +8,9 @@ router.post('/collegeapplications', Middleware, async (req, res) => {
     try {
         if (role !== 'admin') return res.status(403).json({ message: 'access denied' })
         const applications = await College_Applications.find().select('-password')
-        res.status(200).json(applications)
+        res.status(200).json({
+            applications: applications
+        })
     } catch (err) {
         console.log(err)
         res.status(500).json({ message: 'Server error while fetching applications' })

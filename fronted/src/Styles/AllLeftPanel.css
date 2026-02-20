@@ -58,18 +58,17 @@
 .navbar-sec ul li {
     width: 100%;
     list-style-type: none;
-    color: black;
-    font-weight: bold;
+    color:black;
     cursor: pointer;
     display: flex;
     align-items: center;
     margin-right: 15px;
+    font-weight: bold;
 }
 
 .navbar-sec ul li span {
     margin-left: 3px;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 14px;
 }
 
 .navbar-sec ul li #link {
@@ -94,7 +93,7 @@
     border: none;
     outline: none;
     margin-left: 20px;
-    padding: 7px 14px;
+    padding: 10px 20px;
     border-radius: 10px;
     font-size: 13px;
     display: flex;
@@ -108,7 +107,7 @@
 }
 
 .btn {
-    background-color: #2563EB;
+    background-color:#2196f3;
     color: white;
 }
 
@@ -127,16 +126,17 @@
     }
 
     .nav-and-btns {
-        z-index: 1;
-        top: 60px;
+        z-index: 10;
+        top: 52px;
         width: auto;
         padding: 10px;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        background-color: white;
+        min-width:100px;
         position: absolute;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
 
     .navbar-sec ul {
@@ -145,12 +145,11 @@
     }
 
     .navbar-sec ul li {
-        color: black;
-        margin: 2px 0px;
+        margin: 5px 0px;
     }
 
     .navbar-sec ul li span {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .header-btns {
@@ -161,12 +160,16 @@
     }
 
     .header-btns button {
-        font-size: 12px;
-        padding: 5px 10px;
+        width: 100%;
+        font-size: 14px;
+        padding: 15px 10px;
         margin-left: 0px;
         margin: 5px 0px;
-        border-radius: 5px;
+        border-radius: 50px;
         white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .header-leftside {
@@ -181,7 +184,7 @@
     }
 }
 
-@media (min-width: 301px) and (max-width: 768px) {
+@media (min-width: 301px) and (max-width: 1024px) {
     #logo {
         width: 80px;
         height: 40px;
@@ -189,7 +192,7 @@
 
     .nav-and-btns {
         z-index: 1;
-        top: 60px;
+        top: 52px;
         width: auto;
         padding: 10px;
         border-radius: 10px;
@@ -197,7 +200,9 @@
         flex-direction: column;
         align-items: flex-start;
         background-color: white;
+        min-width: 100px;
         position: absolute;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
 
     .navbar-sec ul {
@@ -206,7 +211,6 @@
     }
 
     .navbar-sec ul li {
-        color: black;
         margin: 2px 0px;
     }
 
@@ -223,12 +227,16 @@
     }
 
     .header-btns button {
+        width: 100%;
         font-size: 14px;
-        padding: 5px 10px;
+        padding: 15px 10px;
         margin-left: 0px;
         margin: 5px 0px;
-        border-radius: 5px;
+        border-radius: 50px;
         white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .header-leftside {
@@ -244,12 +252,14 @@
     }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+/* @media (min-width: 769px) and (max-width: 1024px) {
     #logo {
         width: 90px;
         height: 45px;
     }
-
+.header-leftside{
+    display: block;
+}
     .navbar-sec ul li {
         margin-right: 8px;
     }
@@ -265,4 +275,4 @@
         border-radius: 5px;
         white-space: nowrap;
     }
-}
+} */

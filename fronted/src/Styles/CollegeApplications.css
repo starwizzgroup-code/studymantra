@@ -98,3 +98,12 @@
   height: 25px;
   font-size: 10px;
 }
+.main-table-sec table tbody tr td button{
+  background-color: black;
+  padding: 4px 10px;
+  border-radius: 10px;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}

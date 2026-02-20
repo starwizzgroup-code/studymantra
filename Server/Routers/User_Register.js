@@ -5,6 +5,7 @@ const User_Model = require('../Models/User_Register')
 const Inquiry_Model = require('../Models/Inquiry_Model')
 const dotenv = require('dotenv').config()
 const College_Model = require('../Models/College_register')
+const Counselor_Model = require('../Models/CounselorModel')
 const bcrypt = require('bcrypt')
 
 router.post('/user_register', async (req, res) => {
@@ -29,8 +30,14 @@ router.post('/user_register', async (req, res) => {
                 { phone: userdata?.phone }
             ]
         })
+        const counselor = await Counselor_Model.findOne({
+            $or: [
+                { email: userdata?.email },
+                { phone: userdata?.phone }
+            ]
+        })
 
-        if (user || college) return res.status(409).json({ message: 'Email or Phone already registered' })
+        if (user || college || counselor) return res.status(409).json({ message: 'Email or Phone already registered' })
         const newuser = await User_Model.create({
             fullname: userdata?.fullname,
             profile: '',
@@ -69,8 +76,7 @@ router.post('/user_register', async (req, res) => {
         })
 
     } catch (err) {
-        console.log(err)
-        res.status(500).json({ message: 'Server error' })
+        return res.status(500).json({ message: 'Server error' })
     }
 
 })

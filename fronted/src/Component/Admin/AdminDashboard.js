@@ -58,10 +58,11 @@ const AdminProfile = () => {
                                 <ul>
                                     <li><Link id='link'>Profile</Link></li>
                                     <li><Link to={'/admin/counsellors'} id='link'>Counselor</Link></li>
-                                    <li>Quetions</li>
+                                    <li><Link to={'/admin/manageQuetions'} id='link'>Questions</Link></li>
+                                    <li><Link to={'/admin/call-requests'} id='link'>Call Request</Link></li>
                                     <li>Notice</li>
                                     <li><Link to={'/admin/settings'} id='link'>Setting</Link></li>
-                                    <li><button id='admin-logout' onClick={Sign_out}>SignOut</button></li>
+                                    {token && <li><button id='admin-logout' onClick={Sign_out}>SignOut</button></li>}
                                 </ul>
                             </div>
                         )}

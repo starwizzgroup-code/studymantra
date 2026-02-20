@@ -29,11 +29,20 @@
     display: flex;
     align-items: center;
 }
+#page-title p{
+    font-size: 14px;
+    font-weight: bold;
+    color: grey;
+    cursor: pointer;
+}
+#page-title span{
+    margin: 0px 5px -3px 5px;
+}
 #page-title button {
     width: 25px;
     height: 25px;
     background-color:#e9e9e9;
-    margin-right: 5px;
+    margin: 0px 5px;
     border: none;
     outline: none;
     border-radius: 7px;
@@ -48,5 +57,5 @@
     cursor: pointer;
 }
 #page-title h1{
-    font-size: 20px;
+    font-size: 15px;
 }

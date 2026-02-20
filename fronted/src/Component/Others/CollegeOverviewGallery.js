@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import useAuth from '../../Hooks/useAuth'
 
 const CollegeOverviewGallery = ({ collegeId }) => {
     const URL = process.env.REACT_APP_SERVER_URL
     const [gallery, setgallery] = useState([])
+
 
     useEffect(() => {
         const getgallery = async () => {

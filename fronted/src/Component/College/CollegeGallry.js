@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import CollegeHeader from './CollegeHeader'
 import AddRoundedIcon from '@mui/icons-material/AddRounded';
 import '../../Styles/Gallery.css'
 import AddGalleryPhoto from './AddGalleryPhoto';
 import Managegallery from './Managegallery';
 import { useNavigate } from 'react-router-dom';
-import KeyboardDoubleArrowLeftRoundedIcon from '@mui/icons-material/KeyboardDoubleArrowLeftRounded';
+import { FaAngleLeft } from "react-icons/fa6";
 
 const CollegeGallry = () => {
 
@@ -18,9 +17,10 @@ const CollegeGallry = () => {
         <div className='child-profile'>
           {/* page title */}
           <div id='page-title'>
-            <button onClick={() => Navigate(-1)}><KeyboardDoubleArrowLeftRoundedIcon /></button>
-            <h1>Gallery</h1>
-          </div>
+                      <p onClick={() => Navigate(-1)}>Profile</p>
+                      <span><FaAngleLeft fontSize={14} /></span>
+                      <h1>Gallery</h1>
+                    </div>
 
           {/* course page */}
           <div className='counselor-page'>

@@ -32,11 +32,6 @@ const SearchCollege = ({ searchpopup }) => {
     fetchcollege()
   }
 
-  // show search 
-  const showsearch = () => {
-    searchpopup()
-  }
-
   const getCollegedetails = async (college) => {
     const collegeId = college?._id
     Navigate(`/home/collegedetail/${collegeId}`)
@@ -53,7 +48,7 @@ const SearchCollege = ({ searchpopup }) => {
               <input type="text" name="search" id="" onChange={search_college} placeholder='Search for college' />
             </form>
           </div>
-          <button onClick={showsearch}><ClearRoundedIcon /></button>
+          <button onClick={searchpopup}><ClearRoundedIcon /></button>
         </div>
 
         <div className='collegse-popup'>

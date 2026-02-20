@@ -9,7 +9,7 @@ router.get('/collegeoverviewbasic/:collegeId', async (req,res) => {
     try{
 
         if(!collegeId) return res.status(400).json({message: 'Require data is missing'})
-            const college = await College_Model.findOne({_id: collegeId}).select('collegename institutecategory type mode boardauthority logo siteurl about')
+            const college = await College_Model.findOne({_id: collegeId}).select('collegename institutecategory type mode boardauthority profile siteurl about')
         if(!college) return res.status(404).json({message: 'Not found'})
         res.status(200).json(college)
 

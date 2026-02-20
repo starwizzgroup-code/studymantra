@@ -2,36 +2,15 @@ import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../../App'
 import axios from 'axios'
 import '../../Styles/CollegeApplications.css'
-import { listItemSecondaryActionClasses } from '@mui/material/ListItemSecondaryAction'
-
-const ChildUserEnquiry = () => {
+const ChildUserEnquiry = ({enquiry}) => {
   const { user, role, token } = useContext(AuthContext)
-  const URL = process.env.REACT_APP_SERVER_URL
-  const [enquiry, setenquiry] = useState([])
   const status = ['Pending', 'In-Progress', 'Closed']
-
-  useEffect(() => {
-    const get_enquiry = async () => {
-      try {
-        const res = await axios.post(`${URL}/userenquiry_Atdashboard`, {}, {
-          headers: { Authorization: `Bearer ${token}` }
-        })
-        setenquiry(res?.data)
-      } catch (err) {
-        if (err?.response?.status === 400 || err?.response?.status === 403 || err?.response?.status === 500) {
-          alert(err?.response?.data?.message)
-        }
-      }
-    }
-    if (token) {
-      get_enquiry()
-    }
-  }, [token, URL])
 
   // take action approval, underreview, reject
   const takeaction = async (event, enquiry) => {
     const actionvalue = event.target.value
     const enquiryId = enquiry?.enquiryId
+    if(!enquiryId) return;
     if (!actionvalue) alert('Something went wrong')
     const isconfirm = window.confirm(`Are you sure you want to ${actionvalue} college?`)
     if (!isconfirm) return;

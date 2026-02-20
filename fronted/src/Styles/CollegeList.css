@@ -1,0 +1,82 @@
+.college-list-toppage {
+    padding: 20px 0px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+}
+
+.collegelist-chilapage {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.college-card {
+    background: #fff;
+    width: 150px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    height: 170px;
+}
+
+.college-card:hover {
+    transform: translateY(-5px);
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.college-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: -webkit-box;
+    width: 100%;
+    -webkit-box-orient: vertical;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 10px 0px;
+}
+
+.tags span {
+    background: #f1f1f1;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #333;
+    font-weight: 500;
+}
+
+.college-type {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+
+/* top universities */
+.top-collegesUniversities-page {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}

@@ -12,7 +12,9 @@ router.post('/userapplication_atdashboard', Middleware, async (req, res) => {
         if (!role || !id) res.status(400).json({ message: 'Missing require data' })
         if (role !== 'admin' && role !== 'counselor') res.status(403).json({ message: 'Access denied' })
         const applications = await Application_Model.find()
-        res.status(200).json(applications)
+        res.status(200).json({
+            applications: applications
+        })
 
     } catch (err) {
         res.status(500).json({ message: 'Server error' })

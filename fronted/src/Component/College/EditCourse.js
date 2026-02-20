@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useInsertionEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import CollegeHeader from './CollegeHeader'
-import KeyboardDoubleArrowLeftRoundedIcon from '@mui/icons-material/KeyboardDoubleArrowLeftRounded';
 import '../../Styles/ManageCourse.css'
 import { AuthContext } from '../../App';
 import axios from 'axios'
+import { FaAngleLeft } from "react-icons/fa6";
 
 const EditCourse = () => {
   const { user, role, token } = useContext(AuthContext)
@@ -51,7 +50,11 @@ const EditCourse = () => {
       <div className='admin-profile'>
         <div className='child-profile'>
           {/* page title */}
-          <h3 id='page-title'><button onClick={() => Navigate(-1)}><KeyboardDoubleArrowLeftRoundedIcon /></button>Edit Course</h3>
+          <div id='page-title'>
+            <p onClick={() => Navigate(-1)}>Home</p>
+            <span><FaAngleLeft fontSize={14} /></span>
+            <h1>Edit course</h1>
+          </div>
 
           {/* edit course */}
           <div className='edit-course-page'>
@@ -59,7 +62,7 @@ const EditCourse = () => {
 
             <form onSubmit={update_course}>
 
-              <div className='edit-course'>
+              <div className='grid-layout'>
                 <div className='e-course-sec'>
                   <label>Category</label>
                   <input type="text" name="category" id="" value={updatecourse?.coursecategory} placeholder='Category' />
@@ -78,9 +81,7 @@ const EditCourse = () => {
                   <label>Level</label>
                   <input type="text" name="level" id="" value={updatecourse?.courselevel} placeholder='Level' />
                 </div>
-              </div>
 
-              <div className='edit-course'>
                 <div className='e-course-sec'>
                   <label>Department</label>
                   <input type="text" name="category" id="" value={updatecourse?.department} placeholder='Category' />
@@ -93,12 +94,11 @@ const EditCourse = () => {
                   <label>Eligibility</label>
                   <input type="text" name="eligibility" id="" value={updatecourse?.eligibility} onChange={handlechnages} placeholder='Level' />
                 </div>
+                <div className='edit-course-fee' style={{ marginBottom: '10px' }}>
+                  <label>Yearly Fee</label>
+                  <input type="number" name="yearlyfee" id="" value={updatecourse?.yearlyfee} onChange={handlechnages} placeholder='Total Fee' />
+                </div>
               </div>
-              <div className='edit-course-fee' style={{ marginBottom: '10px' }}>
-                <label>Total Fee</label>
-                <input type="number" name="yearlyfee" id="" value={updatecourse?.yearlyfee} onChange={handlechnages} placeholder='Total Fee' />
-              </div>
-
               <button type='submit' style={{ cursor: status ? 'pointer' : 'not-allowed' }}>{status ? 'Update' : 'Wait'}</button>
 
             </form>

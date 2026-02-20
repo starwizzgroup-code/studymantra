@@ -57,24 +57,6 @@ const CounselorView_UpdateProfile = () => {
         }
     }
 
-    const signIn_counselor = async () => {
-        const counselorId = counselorPayload?.counselorId
-        if (!token || !counselorId) return alert('Something went wrong')
-        try {
-            const res = await axios.post(`${URL}/sendsigninlink_toCounselor`, { counselorId }, {
-                headers: { Authorization: `Bearer ${token}` }
-            })
-            console.log(res)
-            setTimeout(() => {
-                alert(res?.data?.message)
-            }, 2000);
-        } catch (err) {
-            if(err?.response?.status === 400 || err?.response?.status === 404 || err?.response?.status === 403 || err?.response?.status === 500){
-                alert(err?.response?.data?.message)
-            }
-        }
-    }
-
     return (
         <div className='top-page'>
             <div className='admin-profile'>
@@ -88,7 +70,7 @@ const CounselorView_UpdateProfile = () => {
 
                     {/* component */}
                     <CounselorPermission permission={counselorPayload?.permissions} setCounselorPayload={setCounselorPayload} />
-                    <CounselorProfile profile={counselorPayload?.profile} setCounselorPayload={setCounselorPayload} updateCounselor_profile={updateCounselor_profile} signIn_counselor={signIn_counselor} />
+                    <CounselorProfile profile={counselorPayload?.profile} setCounselorPayload={setCounselorPayload} updateCounselor_profile={updateCounselor_profile}/>
 
                 </div>
             </div>

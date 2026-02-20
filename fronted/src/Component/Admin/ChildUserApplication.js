@@ -3,30 +3,9 @@ import '../../Styles/CollegeApplications.css'
 import { AuthContext } from '../../App'
 import axios from 'axios'
 
-const ChildUserApplication = () => {
+const ChildUserApplication = ({userApplications}) => {
     const { user, role, token } = useContext(AuthContext)
-    const [userApplications, setuserApplications] = useState([])
-    const URL = process.env.REACT_APP_SERVER_URL
     const status = ['Pending', 'UnderReview', 'Complete', 'Reject']
-
-    useEffect(() => {
-        // get user applications
-        const get_user_applications = async () => {
-            try {
-                const res = await axios.post(`${URL}/userapplication_atdashboard`, {}, {
-                    headers: { Authorization: `Bearer ${token}` }
-                })
-                setuserApplications(res?.data)
-            } catch (err) {
-                if (err?.response?.status === 400 || err?.response?.status === 403 || err?.response?.status === 500) {
-                    alert(err?.response?.data?.message)
-                }
-            }
-        }
-        if (token) {
-            get_user_applications()
-        }
-    }, [token, URL])
 
     const take_action = async (event, application) => {
         const actionvalue = event.target.value
